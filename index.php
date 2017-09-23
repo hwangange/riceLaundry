@@ -13,7 +13,7 @@
     $conn = new mysqli($db_host, $db_username, $db_pass, $db_name);
     if($conn->connect_error) {
       die("Connection failed" . $conn->connect_error);
-    } 
+    } else {echo "Life's good";} 
 
 ?>
 
@@ -21,7 +21,7 @@
 
 <html>
 <head>
-	<title>Home Page</title>
+	<title>Rice Laundry</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

@@ -41,7 +41,7 @@
 		});
 	</script>
 	<style>
-		input {
+		input, select {
 			color: black;
 		}
 	</style>
@@ -52,7 +52,6 @@
 
 <body>
 	<div class="container">
-<<<<<<< HEAD
 	<header class ="header">
 		<img src="laundry-icon.svg" alt="laundry icon" height="50px">
 		<h1>RICE LAUNDRY</h1>
