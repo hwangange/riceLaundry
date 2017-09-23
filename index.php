@@ -3,7 +3,7 @@
 
 	if(!isset($_SESSION['user'])) {
 	    header('Location: login.php');
-	}
+	} 
 
 	$db_host = "localhost";
     $db_username = "id3015558_username";
@@ -203,6 +203,7 @@
 						<button type="button" class="btn btn-info btn-lg" data-toggle="modal"
 					data-target="#feedbackModal">Feedback</button>
 					<!--Delete account.-->
+					<a href = "logout.php"><button type = "button">Log Out</button></a>
  				</div>
 		</div>
 			<ul class="nav nav-pills pill-height">

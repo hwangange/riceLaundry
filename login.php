@@ -30,10 +30,10 @@
 		<form action="loginConfirm.php" method="post">
 			<input type="text" placeholder="username" name="username" id = "username" required>
 			<input type="password" placeholder="password" name="password" id = "password" required>
-			<div class="checkbox">
+			<!--<div class="checkbox">
 				<span><label><input type="checkbox" name="remember">
 				Remember me</label></span>
-			</div>
+			</div> -->
 			<div class="clearfix">
 				<button type = "submit">LOGIN</button>
 			</div>
