@@ -14,16 +14,17 @@
 ?>
 
 <!DOCTYPE html>
-
 <html>
 <head>
+	<title>Rice Laundry App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<title>Rice Laundry App</title>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="script.js"></script>
-	</script>
+	
 	<script>
 		$(document).ready(function() {
 			$("#collegeSelect li").click(function() {
@@ -44,44 +45,50 @@
 			color: black;
 		}
 	</style>
+
 </head>
+
+
+
 <body>
 	<div class="container">
+<<<<<<< HEAD
 	<header class ="header">
 		<img src="laundry-icon.svg" alt="laundry icon" height="50px">
 		<h1>RICE LAUNDRY</h1>
 	</header>
-	
+	<main class="main">
 		<form method = "post" action="registerConfirm.php">
 				<h4>sign up for rice laundry</h4>
 				<input type="text" placeholder="new username" name="username" required>
 				<br>
 				<input type="password" placeholder="new password" name="password" required>
-				<!--<input type="password" placeholder="confirm password" name="passwordConfirm" required> -->
-				<div class="dropdown">
-    			<button class="btn btn-default dropdown-toggle" class="selectBox" type="button"
-					id="menu1" data-toggle="dropdown">your college
-    			<span class="caret"></span></button>
-    			<ul class="dropdown-menu" role="menu" name = "collegeSelect" id = "collegeSelect" aria-labelledby="menu1">
-	      			<li role="presentation" value = "Baker"><a role="menuitem" tabindex="-1" href="#">Baker</a></li>
-	      			<li role="presentation" value = "Brown"><a role="menuitem" tabindex="-1" href="#">Brown</a></li>
-	      			<li role="presentation" value = "Duncan"><a role="menuitem" tabindex="-1" href="#">Duncan</a></li>
-	      			<li role="presentation" value = "Hanszen"><a role="menuitem" tabindex="-1" href="#">Hanszen</a></li>
-					<li role="presentation" value = "Jones"><a role="menuitem" tabindex="-1" href="#">Jones</a></li>
-					<li role="presentation" value = "Lovett"><a role="menuitem" tabindex="-1" href="#">Lovett </a></li>
-					<li role="presentation" value = "Martel"><a role="menuitem" tabindex="-1" href="#">Martel</a></li>
-					<li role="presentation" value = "McMurtry"><a role="menuitem" tabindex="-1" href="#">McMurtry</a></li>
-					<li role="presentation" value = "Will Rice"><a role="menuitem" tabindex="-1" href="#">Will Rice</a></li>
-					<li role="presentation" value = "Sid Rich"><a role="menuitem" tabindex="-1" href="#">Sid Rich</a></li>
-					<li role="presentation" value = "Weiss"><a role="menuitem" tabindex="-1" href="#">Wiess</a></li>
-    			</ul>
-    			<input type="type" id="college" name="college" readonly>
-  			</div>
-			<div class="clearfix">
-				<button type="submit">CREATE ACCOUNT</button>
-			</div><br>
-			</form>
+				<!--<input type="password" placeholder="confirm password" name="psw" required> -->
+
+
+				<select name="college">
+				  	<option id="rescol">residential college</option>
+					<option value="Baker">Baker</option>
+					<option value="Brown">Brown</option>
+					<option value="Duncan">Duncan</option>
+					<option value="Lovett">Lovett</option>
+					<option value="Hanszen">Hanszen</option>
+					<option value="Jones">Jones</option>
+					<option value="McMurtry">McMurtry</option>
+					<option value="Will Rice">Will Rice</option>
+					<option value="Wiess">Wiess</option>
+					<option value="Sid Rich">Sid Rich</option>
+					<option value="Martel">Martel</option>
+				</select>
+
+
+				<div class="clearfix">
+					<button type="submit">CREATE ACCOUNT</button>
+				</div>
 			<a href="login.php"><p>
 				have an account? sign in</p></a>
-	</body>
-	</html>
+	</form>
+</main>
+</div>
+</body>
+</html>
