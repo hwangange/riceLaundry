@@ -57,10 +57,9 @@
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">Status</h4>
 					</div>
-					<div class="modal-body">
-						<p>
+					<div class="modal-body"
 							<form action="claimMachine.php" method = "post">
-								<br>Machine Name<br>
+								Machine Name<br>
 		  						<input time = "text" name = "machine" id = "machine" readonly>
 		  						<br>Timer<br>
 		  						<input type="time" name="timer" value="30">
@@ -73,7 +72,7 @@
 									data-target="#modalReport"
 									data-dismiss="modal">Report as Broken</button>
 							</form>
-						</p>
+						
 					</div>
 					<div class="modal-footer">
 					</div>
