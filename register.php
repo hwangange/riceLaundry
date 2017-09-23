@@ -44,7 +44,7 @@
 				<div class="clearfix">
 					<button type="button" onclick="createaccount()">CREATE ACCOUNT</button>
 				</div><br>
-			<a href="index.php"><p>
+			<a href="login.php"><p>
 				have an account? sign in</p></a>
 	</body>
 	</html>

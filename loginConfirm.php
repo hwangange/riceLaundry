@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $db_host = "localhost";
     $db_username = "id3015558_username";
     $db_pass = "laundrysucks";
@@ -18,17 +18,11 @@
     $sql = "SELECT * FROM users WHERE username ='$username' AND password = '$password'";
     $existCount = mysqli_num_rows($conn->query($sql));
    
-    if($existCount == 0) { 
-      die('Sorry, the username and password do not match.');
-    } else {
-
-
-     // echo "Logged In";
-      echo "Logged in";
+    if($existCount == 1) { 
       $_SESSION['user'] = $_POST["username"];
       header('Location: index.php');
-     
-      
+    } else {
+       die('Sorry, the username and password do not match.');      
     }
 
 
