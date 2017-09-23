@@ -16,10 +16,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="styles.css">
 		<title>Rice Laundry App</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="script.js"></script>
-		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -27,19 +31,23 @@
 			<img src="laundry-icon.svg" alt="laundry icon" height="50px">
 			<h1>RICE LAUNDRY</h1>
 		</header>
+<main class="main">
 		<form action="loginConfirm.php" method="post">
-			<input type="text" placeholder="username" name="username" id = "username" required>
-			<input type="password" placeholder="password" name="password" id = "password" required>
-			<!--<div class="checkbox">
-				<span><label><input type="checkbox" name="remember">
-				Remember me</label></span>
-			</div> -->
-			<div class="clearfix">
-				<button type = "submit">LOGIN</button>
-			</div>
+	    		<input type="text" placeholder="username" name="username" id = "username" required>
+	    		<input type="password" placeholder="password" name="password" id = "password" required>
+<!-- 	    		<div>
+	    		<input type="checkbox" id="remember" name="remember">
+	    		<label for="remember">remember me</label>
+	    	</div> -->
+	   			<div class="clearfix">
+<!-- 	     			<a href="duncan.html"><button type="button" onclick="login()">LOGIN</button></a> -->
+	     			<button type = "submit">LOGIN</button>
+	   			</div>
+					
+
 		</form>
-		<a href = "register.php"><p>don't have an account? register here</p></a>
-		</div>
+		<a href="register.php"><p>don't have an account? register here</p></a>
+	</main>
 	</body>
 </html>
 
