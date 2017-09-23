@@ -10,11 +10,23 @@
 	<link rel="stylesheet" href="duncan.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="duncan.js"></script>
   
 </head>
 
 
 <body>
+		<!--Opens when a laundry machine is selected.-->
+			<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Status</h4>
+					</div>
+					<div class="modal-body">
+						<p><form action="/action_page.php" id="form-id" method="post">
+  						Minutes<br>
 
 	<!--Opens when a laundry machine is selected.-->
 	<div class="modal fade" id="myModal" role="dialog">
@@ -167,12 +179,10 @@
 						</form></p>
 					</div>
 					<div class="modal-footer">
-					</div>
-				</div>
-			</div>
-		</div>
 
 
+
+						
 	<div class="container-fluid">
 		<div class="scroll-area">
 				<div class="tab-content">
@@ -287,7 +297,7 @@
 						</div>
 					</div>
 				</div>
-			</div>d
+			</div>
 				<ul class="nav nav-pills pill-height">
 					<li class="active"><a data-toggle="tab" href="#1a"><i class="material-icons">local_laundry_service</i></a></li>
 				  	<li><a href="#2a" data-toggle="tab"><i class="material-icons">timer</i></a></li>
