@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    min-height: 400px;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: #1C3968;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 150%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A2B6F0;
+}
+
+p {
+    font-size: 75%;
+}
+
+/* Full-width input fields */
+input {
+    width: 100%;
+    min-width: 200px;
+    padding: 15px 10px;
+    margin: 10px auto;
+    display: inline-block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #1C3968;
+    color: white;
+    padding: 13px 20px;
+    margin: 20px auto 0px auto;
+    border: solid 2px white;
+    cursor: pointer;
+	border-radius: 10px;
+    width: 75%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+button:hover {
+	background-color: #A2B6F0;
+    border: solid 2px #A2B6F0;
+}
+
+button:active {
+	background-color: white;
+	color: #1C3968;
+}
+

@@ -1,0 +1,42 @@
+.button {
+	  padding: 50px 40px;
+	  font-size: 20px;
+	  text-align: center;
+	  cursor: pointer;
+	  outline: none;
+	  color: #fff;
+	  background-color: #009900;
+    /*border: none;*/
+	  border-radius: 15px;
+	  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #006000}
+
+.button:active {
+  background-color: #006000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+
+.redButton {
+  padding: 50px 40px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #CC0000;
+  /*border: none;*/
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.redButton:hover{background-color: #990000}
+
+.redButton:active {
+  background-color: #990000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

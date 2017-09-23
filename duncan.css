@@ -1,0 +1,71 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #1C3968;
+}
+
+.container {
+    padding: 0;
+
+}
+
+.tab-content {
+    color : white;   
+    background-color: white;
+}
+
+.room-label {
+    background-color: #1C3968;
+}
+
+h1 {
+    color: white;
+    font-weight: lighter;
+    font-size: 150%;
+    padding: 2px 10px;
+}
+
+
+/* Set a style for all buttons */
+button {
+    background-color: #1C3968;
+    color: #fff;
+    padding: 2px 2px;
+    margin: 2px;
+    border: solid 2px white;
+    cursor: pointer;
+	border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: block;
+}
+
+.in-use button {
+    background-color: #4CAF50;
+}
+
+button:hover {
+	background-color: #A2B6F0;
+    border: solid 2px #A2B6F0;
+}
+
+button:active {
+	background-color: white;
+	color: #1C3968;
+}
+
+.nav-pills > li > a {
+    border-radius: 0;
+}
+
+.nav-pills > li {
+    width: 32%;
+    text-align: center;
+}
+
+.nav-pills {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
