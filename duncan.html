@@ -10,64 +10,250 @@
 	<link rel="stylesheet" href="duncan.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="duncan.js"></script>
   
 </head>
 
 
 <body>
+		<!--Opens when a laundry machine is selected.-->
+			<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Status</h4>
+					</div>
+					<div class="modal-body">
+						<p><form action="/action_page.php" id="form-id" method="post">
+  						Minutes<br>
 
-	<div class="container">
+  <select class="form-control">
+  <option>Select an option</option>
+<option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> <option>6</option> <option>7</option> <option>8</option> <option>9</option> <option>10</option> <option>11</option> <option>12</option> <option>13</option> <option>14</option> <option>15</option> <option>16</option> <option>17</option> <option>18</option> <option>19</option> <option>20</option> <option>21</option> <option>22</option> <option>23</option> <option>24</option> <option>25</option> <option>26</option> <option>27</option> <option>28</option> <option>29</option> <option>30</option> <option>31</option> <option>32</option> <option>33</option> <option>34</option> <option>35</option> <option>36</option> <option>37</option> <option>38</option> <option>39</option> <option>40</option> <option>41</option> <option>42</option> <option>43</option> <option>44</option> <option>45</option>
+</select>
 
-		<div class="tab-content clearfix">
+  						<br><br>
+  						<button type="button" class="btn btn-success" onclick="exec()">Start Timer</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+							<br><br>
+							<button type="button" class="btn btn-danger"
+							data-toggle="modal"
+							data-target="#modalReport"
+							data-dismiss="modal">Report as Broken</button>
+              <script>
+						  function exec(){
+							document.getElementById('form-id').submit()
+							alert('submitted')
+						  }
+						  </script>
+						</form></p>
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Appears after user clicks Report as Broken.-->
+		<div class="modal fade" id="modalReport" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Report Broken Machine</h4>
+					</div>
+					<div class="modal-body">
+						<p><form action="/action_page.php">
+							What's wrong with the machine?
+							<div class="radio">
+  							<label><input type="radio" name="optradio">The machine is not
+									starting</label>
+							</div>
+							<div class="radio">
+  							<label><input type="radio" name="optradio">The machine starts
+									but doesn't wash/dry properly</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio">Other</label>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+						<button type="button" class="btn btn-default"
+						data-toggle="modal"
+						data-target="#modalThanks"
+						data-dismiss="modal"
+						onclick="usrreport()">Submit</button>
+						</form></p>
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Appears after successful user report.-->
+		<div class="modal fade" id="modalThanks" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Thank you.</h4>
+					</div>
+					<div class="modal-body">
+						<p><form action="/action_page.php">
+						Report submitted successfully.
+						</form></p>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Appears after "feedback" is chosen in the Settings menu.-->
+		<div class="modal fade" id="modalFeedback" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Status</h4>
+					</div>
+					<div class="modal-body">
+						<p><form action="/action_page.php">
+							<label for="comment">How can we improve?</label>
+							<textarea class="form-control" rows="5" id="comment"></textarea>
+							<button type="button" class="btn btn-success">Send</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						</form></p>
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<div class="container-fluid">
+
+
+		<div class="scroll-area">
+		<div class="tab-content">
 			<div class="tab-pane active" id="1a">
-          		<div class="row room-label">
+          		<div class="row">
 					<div class="col-sm-12">
 						<h1> Duncan Laundry Room </h1>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6>
-						<button class ="in-use" class="button">Washer 1</button>
-						<button class="button">Washer 2</button>
-						<button class="button">Washer 3</button>
-						<button class="button">Washer 4</button>
-						<button class="button">Washer 5</button>
-						<button class="button">Washer 6</button>
-						<button class="button">Washer 7</button>
-						<button class="button">Washer 8</button>
+
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 1</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 2</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 3</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 4</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 5</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 6</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 7</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Washer 8</button>
 					</div>
 
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-						<button class="button" >Dryer 1</button>
-						<button class="button" >Dryer 2</button>
-						<button class="button" >Dryer 3</button>
-						<button class="button" >Dryer 4</button>
-						<button class="button" >Dryer 5</button>
-						<button class="button" >Dryer 6</button>
-					</div>
 
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-						<button class="button" >Dryer 7</button>
-						<button class="button" >Dryer 8</button>
-						<button class="button" >Dryer 9</button>
-						<button class="button" >Dryer 10</button>
-						<button class="button" >Dryer 11</button>
-						<button class="button" >Dryer 12</button>
+
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 1</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 2</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 3</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 4</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 5</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 6</button>
+					</div>
+
+
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 7</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 8</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 9</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 10</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 11</button>
+						<button type="button" class="washerbutton" data-toggle="modal" data-target="#myModal">Dryer 12</button>
 					</div>
 				</div>
 			</div>
+
+			<!-- Machines tab showing timer -->
 			<div class="tab-pane" id="2a">
-          		<h3>The timer will go here</h3>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<h1>Your machines</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<h1>Dryer 1</h1>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<h1>Time remaining:</h1>
+						<p id="demo"></p>
+					</div>
+				</div>
+
+
+					
 			</div>
+
         	<div class="tab-pane" id="3a">
-          		<h3>Here are the settings</h3>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Settings</h1>
+								<div class="dropdown">
+  							<button class="btn btn-primary dropdown-toggle" type="button"
+								data-toggle="dropdown">Change college
+  							<span class="caret"></span></button>
+  							<ul class="dropdown-menu">
+    						<li><a href="#">Baker</a></li>
+    						<li><a href="#">Brown</a></li>
+    						<li><a href="#">Duncan</a></li>
+								<li><a href="#">Hanszen</a></li>
+								<li><a href="#">Jones</a></li>
+								<li><a href="#">Lovett</a></li>
+								<li><a href="#">Martel</a></li>
+								<li><a href="#">McMurtry</a></li>
+								<li><a href="#">Will Rice</a></li>
+								<li><a href="#">Sid Rich</a></li>
+								<li><a href="#">Wiess</a></li>
+								</ul>
+							</div><br>
+							<!--Send feedback.-->
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+							data-target="#feedbackModal">Feedback</button>
+							<!--Delete account.-->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<h1>Account username:</h1>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<h1>Username goes here</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<h1>Residential college:</h1>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<h1>College goes here</h1>
+					</div>
+				</div>
 			</div>
 		</div>
-			<ul class="nav nav-pills pill-height">
+	</div>d
+		<ul class="nav nav-pills pill-height">
 			<li class="active"><a data-toggle="tab" href="#1a"><i class="material-icons">local_laundry_service</i></a></li>
 		  	<li><a href="#2a" data-toggle="tab"><i class="material-icons">timer</i></a></li>
 		  	<li><a href="#3a" data-toggle="tab"><i class="material-icons">settings</i></a></li>
 		</ul>
-  	</div>
+	</div>
+
 </body>
 </html>
