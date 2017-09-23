@@ -30,20 +30,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="duncan.js"></script>
-
-	<script>
-
-		$(document).ready(function() {
-			$(".washerbutton").click(function() {
-				machineName = $(this).attr('name');
-				$("#machineName").html(machineName);
-				$('#machine').attr('value',machineName);
-			});
-
-		});
-
-	</script>
-
 </head>
 
 
@@ -55,32 +41,17 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Machine Status</h4>
-					</div>
-					<div class="modal-body"
-							<form action="claimMachine.php" method = "post">
-								Machine Name<br>
-		  						<input time = "text" name = "machine" id = "machine" readonly>
-		  						<br>Timer<br>
-		  						<input type="time" name="timer" value="30">
-		  						<br><br>
-		  						<button type="submit" class="btn btn-success">Start Timer</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-									<br><br>
-									<button type="button" class="btn btn-danger"
-									data-toggle="modal"
-									data-target="#modalReport"
-									data-dismiss="modal">Report as Broken</button>
-							</form>
-						
-					<div class="modal-body">
-						<p><form action="claimMachine.php" method = "post">
-						<br>Machine Name<br>
+				</div>
+
+				<div class="modal-body">
+					<form action="claimMachine.php" method = "post">
+						Machine Name<br>
 		  				<input time = "text" name = "machine" id = "machine" readonly>
 		  				<br>Timer<br>
 		  				<input type="time" name="timer" value="30">
 		  				<select class="form-control">
-	  						<option>Select an option</option>
-			  				<option value="1">1</option>
+		  					<option>Select an option</option>
+				  			<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -126,23 +97,23 @@
 							<option value="44">44</option>
 							<option value="45">45</option>
 						</select>
-
 		  				<br><br>
-		  				<button type="submit" class="btn btn-success" onclic="exec()">Start Timer</button>
+		  				<button type="submit" class="btn btn-success" onclick="exec()"">Start Timer</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 						<br><br>
-						<button type="button" class="btn btn-danger"
-						data-toggle="modal"
-						data-target="#modalReport"
-						data-dismiss="modal">Report as Broken</button>
-						</form>
-						</p>
-					</div>
-					<div class="modal-footer">
-					</div>
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalReport" data-dismiss="modal">Report as Broken</button>
+					</form>
 				</div>
+					
+				<div class="modal-footer">
+				</div>
+
 			</div>
 		</div>
+	</div>
+		
+
+
 		<!--Appears after user clicks Report as Broken.-->
 		<div class="modal fade" id="modalReport" role="dialog">
 			<div class="modal-dialog">
@@ -222,7 +193,7 @@
 		</div>
 
 
-	<div class="container-fluid">
+<div class="container-fluid">
 	<div class="scroll-area">
 		<div class="tab-content">
 			<div class="tab-pane active" id="1a">
@@ -231,6 +202,7 @@
 						<h1> Duncan Laundry Room </h1>
 					</div>
 				</div>
+				
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<button type="button" class="washerbutton" name = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
