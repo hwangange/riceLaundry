@@ -40,11 +40,8 @@
 			});
 		});
 	</script>
-	<style>
-		input, select {
-			color: black;
-		}
-	</style>
+
+
 
 </head>
 
@@ -52,41 +49,47 @@
 
 <body>
 	<div class="container">
-	<header class ="header">
-		<img src="laundry-icon.svg" alt="laundry icon" height="50px">
-		<h1>RICE LAUNDRY</h1>
-	</header>
-	<main class="main">
-		<form method = "post" action="registerConfirm.php">
-				<h4>sign up for rice laundry</h4>
-				<input type="text" placeholder="new username" name="username" required>
-				<br>
-				<input type="password" placeholder="new password" name="password" required>
-				<!--<input type="password" placeholder="confirm password" name="psw" required> -->
 
+		<row>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-				<select name="college">
-				  	<option id="rescol">residential college</option>
-					<option value="Baker">Baker</option>
-					<option value="Brown">Brown</option>
-					<option value="Duncan">Duncan</option>
-					<option value="Lovett">Lovett</option>
-					<option value="Hanszen">Hanszen</option>
-					<option value="Jones">Jones</option>
-					<option value="McMurtry">McMurtry</option>
-					<option value="Will Rice">Will Rice</option>
-					<option value="Wiess">Wiess</option>
-					<option value="Sid Rich">Sid Rich</option>
-					<option value="Martel">Martel</option>
-				</select>
+			<header class ="header">
+				<img src="laundry-icon.svg" alt="laundry icon" height="50px">
+				<h1>RICE LAUNDRY</h1>
+			</header>
 
+			<main class="main">
+				<h2>sign up</h2>
+				<form method = "post" action="registerConfirm.php">
+						
+						<input type="text" placeholder="new username" name="username" required>
+						<input type="password" placeholder="new password" name="password" required>
+						<!--<input type="password" placeholder="confirm password" name="psw" required> -->
 
-				<div class="clearfix">
-					<button type="submit">CREATE ACCOUNT</button>
-				</div>
-	</form>
-	<a href="login.php"><p>have an account? sign in</p></a>
-</main>
-</div>
+						<select name="college">
+						  	<option id="rescol">residential college</option>
+							<option value="Baker">Baker</option>
+							<option value="Will Rice">Will Rice</option>
+							<option value="Hanszen">Hanszen</option>
+							<option value="Wiess">Wiess</option>
+							<option value="Jones">Jones</option>
+							<option value="Brown">Brown</option>
+							<option value="Lovett">Lovett</option>
+							<option value="Sid Rich">Sid Rich</option>
+							<option value="Martel">Martel</option>
+							<option value="McMurtry">McMurtry</option>
+							<option value="Duncan">Duncan</option>	
+						</select>
+
+						<div class="clearfix">
+							<button type="submit">CREATE ACCOUNT</button>
+						</div>
+
+			</form>
+			<a href="login.php"><p>have an account? sign in</p></a>
+		</main>
+		</div>
+		</row>
+	</div>
 </body>
 </html>

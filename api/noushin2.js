@@ -18,18 +18,18 @@ function update_ui(element){
 	var time_stamp = element.timer;
 	var diff = curr_time-time_stamp;
 	if(diff<0){
-		machine.innerHTML=id;
-
 		
-	}
-	else{
-
 		diff=Math.abs(diff);
 		minutes=Math.floor(diff/60);
 		seconds=Math.floor(diff%60);
 		if(minutes<10)minutes="0"+minutes;
 		if(seconds<10)seconds="0"+seconds;
 		machine.innerHTML=minutes+":"+seconds;
+		
+	}
+	else{
+
+		machine.innerHTML=id;
 
 	}
 	if(id==selected){
