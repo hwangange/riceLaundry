@@ -16,14 +16,25 @@
 
 
     $sql = "SELECT * FROM users WHERE username ='$username' AND password = '$password'";
+
+    $data = array();
+    $result = $conn->query($sql);
+
     $existCount = mysqli_num_rows($conn->query($sql));
    
     if($existCount == 1) { 
       $_SESSION['user'] = $_POST["username"];
+      while ($row = $result->fetch_assoc()) {
+         $_SESSION['college'] = $row['college'];
+      }
       header('Location: index.php');
     } else {
        die('Sorry, the username and password do not match.');      
     }
+
+    
+
+   
 
 
 ?>

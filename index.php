@@ -30,6 +30,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="duncan.js"></script>
+	<script src = "/api/noushin2.js"></script>
 	<script>
 
 		$(document).ready(function() {
@@ -280,10 +281,10 @@
 							<h1>residential college:</h1>
 						</div>
 							<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-								<h1 id="current"></h1>
+								<h1 id="current"><?php echo $_SESSION['college']; ?></h1>
 							</div>
 					</div>
-					<form action="/action_page.php">
+				<!--	<form action="/action_page.php">
 							<select onchange="showSelectedItem()" id="college" name="options" class="form-control" style="text-align-last:center;margin:100px;width:200px">
 								<option selected disabled hidden>change college </option>
 								<option value="Baker">Baker</option>
@@ -297,7 +298,7 @@
 								<option value="Will Rice">Will Rice</option>
 								<option value="Sid Rich">Sid Rich</option>
 								<option value="Wiess">Wiess</option>
-							</select>
+							</select> -->
 						<!--This is the old dropdown code, for reference.
 							<button class="dropbtn" type="button"
 							data-toggle="dropdown">Change college
@@ -319,13 +320,13 @@
 							<button type="button" class="feedbackbutton" data-toggle="modal"
 							data-target="#modalFeedback">feedback</button>
 					<!--Delete account.-->
-					<a href = "logout.php"><button type = "button">Log Out</button></a>
+					<a href = "logout.php"><button type = "button" class = "feedbackbutton">Log Out</button></a>
  				</div>
 		</div>
 			<ul class="nav nav-pills pill-height">
-				<li class="active"><a data-toggle="tab" href="#1a"><i class="material-icons">local_laundry_service</i></a></li>
-			  	<li><a href="#2a" data-toggle="tab"><i class="material-icons">timer</i></a></li>
-			  	<li><a href="#3a" data-toggle="tab"><i class="material-icons">settings</i></a></li>
+				<li class="active" id = "service_page"><a data-toggle="tab" href="#1a"><i class="material-icons">local_laundry_service</i></a></li>
+			  	<li id = "timer_page"><a href="#2a" data-toggle="tab"><i class="material-icons">timer</i></a></li>
+			  	<li id = "settings_page"><a href="#3a" data-toggle="tab"><i class="material-icons">settings</i></a></li>
 			</ul>
   		</div>
 </body>
