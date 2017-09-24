@@ -47,6 +47,8 @@
 
 <body>
 	<div class="container">
+		<row>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<header class ="header">
 		<img src="laundry-icon.svg" alt="laundry icon" height="50px">
 		<h1>RICE LAUNDRY</h1>
@@ -81,6 +83,8 @@
 			<a href="login.php"><p>have an account? sign in</p></a>
 		</form>
 	</main>
+</div>
+</row>
 	</div>
 </body>
 </html>
