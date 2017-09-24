@@ -199,20 +199,20 @@
 			<div class="tab-pane active" id="1a">
           		<div class="row">
 					<div class="col-sm-12">
-						<h1> Duncan Laundry Room </h1>
+						<h1> laundry room </h1>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<button type="button" class="washerbutton" name = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
-						<button type="button" class="washerbutton" name = "washer2" data-toggle="modal" data-target="#myModal">Washer 2</button>
-						<button type="button" class="washerbutton" name = "washer3" data-toggle="modal" data-target="#myModal">Washer 3</button>
-						<button type="button" class="washerbutton" name = "washer4" data-toggle="modal" data-target="#myModal">Washer 4</button>
-						<button type="button" class="washerbutton" name = "washer5" data-toggle="modal" data-target="#myModal">Washer 5</button>
-						<button type="button" class="washerbutton" name = "washer6" data-toggle="modal" data-target="#myModal">Washer 6</button>
-						<button type="button" class="washerbutton" name = "washer7" data-toggle="modal" data-target="#myModal">Washer 7</button>
-						<button type="button" class="washerbutton" name = "washer8" data-toggle="modal" data-target="#myModal">Washer 8</button>
+						<button type="button" class="washerbutton in-use" name = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
+						<button type="button" class="washerbutton available" name = "washer2" data-toggle="modal" data-target="#myModal">Washer 2</button>
+						<button type="button" class="washerbutton available" name = "washer3" data-toggle="modal" data-target="#myModal">Washer 3</button>
+						<button type="button" class="washerbutton available" name = "washer4" data-toggle="modal" data-target="#myModal">Washer 4</button>
+						<button type="button" class="washerbutton available" name = "washer5" data-toggle="modal" data-target="#myModal">Washer 5</button>
+						<button type="button" class="washerbutton available" name = "washer6" data-toggle="modal" data-target="#myModal">Washer 6</button>
+						<button type="button" class="washerbutton in-use" name = "washer7" data-toggle="modal" data-target="#myModal">Washer 7</button>
+						<button type="button" class="washerbutton in-use" name = "washer8" data-toggle="modal" data-target="#myModal">Washer 8</button>
 					</div>
 
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -237,12 +237,21 @@
 			<div class="tab-pane" id="2a">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<h1>Your machines</h1>
+						<h1>your machines</h1>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 						<h1>Dryer 1</h1>
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<h1>Time remaining:</h1>
+						<p id="demo"></p>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<h1>Dryer 2</h1>
 					</div>
 					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 						<h1>Time remaining:</h1>
