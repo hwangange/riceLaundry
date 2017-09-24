@@ -27,29 +27,38 @@
 	</head>
 	<body>
 		<div class="container">
-		<header class ="header">
-			<img src="laundry-icon.svg" alt="laundry icon" height="50px">
-			<h1>RICE LAUNDRY</h1>
-		</header>
-<main class="main">
-		<form action="loginConfirm.php" method="post">
-	    		<input type="text" placeholder="username" name="username" id = "username" required>
-	    		<input type="password" placeholder="password" name="password" id = "password" required>
-<!-- 	    		<div>
-	    		<input type="checkbox" id="remember" name="remember">
-	    		<label for="remember">remember me</label>
-	    	</div> -->
-	   			<div class="clearfix">
-<!-- 	     			<a href="duncan.html"><button type="button" onclick="login()">LOGIN</button></a> -->
-	     			<button type = "submit">LOGIN</button>
-	   			</div>
-					
+		<row>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<header class ="header">
+				<img src="laundry-icon.svg" alt="laundry icon" height="50px">
+				<h1>RICE LAUNDRY</h1>
+			</header>
+			<main class="main">
+			<form action="loginConfirm.php" method="post">
+		    		<input type="text" placeholder="username" name="username" id = "username" required>
+		    		<input type="password" placeholder="password" name="password" id = "password" required>
+	<!-- 	    		<div>
+		    		<input type="checkbox" id="remember" name="remember">
+		    		<label for="remember">remember me</label>
+		    	</div> -->
+		   			<div class="clearfix">
+	<!-- 	     			<a href="duncan.html"><button type="button" onclick="login()">LOGIN</button></a> -->
+		     			<button type = "submit">LOGIN</button>
+		   			</div>
+						
 
-		</form>
-		<a href="register.php"><p>don't have an account? register here</p></a>
-	</main>
+			</form>
+			<a href="register.php"><p>don't have an account? register here</p></a>
+			</main>
+		</div>
+		</row>
+	</div>
 	</body>
 </html>
+
+
+
+
 
 
 
