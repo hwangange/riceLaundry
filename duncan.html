@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="duncan.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="user_data.js"></script>
 	<script src="duncan.js"></script>
+	<script src="set_timer.js"></script>
 
 
 </head>
@@ -139,7 +141,7 @@
 			<div class="tab-pane active" id="1a">
           		<div class="row">
 					<div class="col-sm-12">
-						<h1> Duncan Laundry Room </h1>
+						<h1><script>document.write(showRoom())</script></h1>
 					</div>
 				</div>
 				<div class="row">
@@ -183,7 +185,7 @@
 			<div class="tab-pane" id="2a">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<h1>Your machines</h1>
+						<h1 class="title">your machines</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -209,7 +211,7 @@
 							<h1>account username:</h1>
 						</div>
 						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-							<h1>username goes here</h1>
+							<h1><script>document.write(showCurrentUsr())</script></h1>
 						</div>
 					</div>
 					<div class="row">
@@ -217,11 +219,11 @@
 							<h1>residential college:</h1>
 						</div>
 							<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-								<h1 id="current"></h1>
+								<h1 id="currentcol"></h1>
 							</div>
 					</div>
 					<form action="/action_page.php">
-							<select onchange="showSelectedItem()" id="college" name="options" class="form-control" style="text-align-last:center;margin:100px;width:200px">
+							<select onchange="showCurrentCollege()" id="college" name="options" class="form-control">
 								<option selected disabled hidden>change college </option>
 								<option value="Baker">Baker</option>
 								<option value="Brown">Brown</option>

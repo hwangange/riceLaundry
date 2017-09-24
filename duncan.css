@@ -119,10 +119,11 @@ button:active {
     background-color: #1C3968;
 }
 
-select{
-  margin:75px;
-  margin-right:75px;
+#college{
+  display: block;
+  margin: 0 auto;
   font-size: 20px;
-  text-align=center;
+  text-align: center;
+  text-align-last: center;
   width:50%;
 }
