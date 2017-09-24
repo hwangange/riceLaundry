@@ -17,20 +17,23 @@ function update_ui(element){
 	var curr_time = Date.now()/1000;
 	var time_stamp = element.timer;
 	var diff = curr_time-time_stamp;
-	if(diff>=0){
+	if(diff<0){
 		machine.innerHTML=id;
 
 		
 	}
 	else{
-		alert("Negative: " + diff);
+
 		diff=Math.abs(diff);
-		minutes=diff/60;
-		seconds=diff%60;
+		minutes=Math.floor(diff/60);
+		seconds=Math.floor(diff%60);
 		if(minutes<10)minutes="0"+minutes;
 		if(seconds<10)seconds="0"+seconds;
 		machine.innerHTML=minutes+":"+seconds;
 
+	}
+	if(id==selected){
+		//alert(time_stamp+" "+curr_time)
 	}
 
 
@@ -81,4 +84,4 @@ function timer_object(){
 }
 //init_machines(curr_time)
 retr()
-var x=setInterval(retr,7000)
+var x=setInterval(retr,1000)

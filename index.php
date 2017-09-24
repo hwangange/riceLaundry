@@ -59,7 +59,6 @@
 						Machine Name<br>
 		  				<input time = "text" name = "machine" id = "machine" readonly>
 		  				<br>Timer<br>
-		  				<input type="time" name="timer" value="30">
 		  				<select class="form-control">
 		  					<option>Select an option</option>
 				  			<option value="1">1</option>
@@ -110,6 +109,7 @@
 						</select>
 		  				<br><br>
 		  				<button type="submit" class="btn btn-success" onclick="exec()">Start Timer</button>
+
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 						<br><br>
 						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalReport" data-dismiss="modal">Report as Broken</button>
@@ -190,10 +190,10 @@
 						<h4 class="modal-title">Status</h4>
 					</div>
 					<div class="modal-body">
-						<p><form action="/action_page.php">
+						<p><form action="feedback.php" method = "post">
 							<label for="comment">How can we improve?</label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
-							<button type="button" class="btn btn-success">Send</button>
+							<textarea class="form-control" rows="5" id="comment" name = "feedback"></textarea>
+							<button type="submit" class="btn btn-success">Send</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 						</form></p>
 					</div>
@@ -216,7 +216,10 @@
 				
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<button type="button" class="washerbutton" name = "washer1" id = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
+						<button type="button" class="washerbutton" onclick="test(this)" name = "washer1" id = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
+<script>function test(button){
+ set_machine(button.id)
+}</script>
 						<button type="button" class="washerbutton" name = "washer2" id = "washer2" data-toggle="modal" data-target="#myModal">Washer 2</button>
 						<button type="button" class="washerbutton" name = "washer3" id = "washer3" data-toggle="modal" data-target="#myModal">Washer 3</button>
 						<button type="button" class="washerbutton" name = "washer4" id = "washer4" data-toggle="modal" data-target="#myModal">Washer 4</button>
@@ -321,6 +324,7 @@
 							data-target="#modalFeedback">feedback</button>
 					<!--Delete account.-->
 					<a href = "logout.php"><button type = "button" class = "feedbackbutton">Log Out</button></a>
+<button type = "button" id = "timee">Time</button>
  				</div>
 		</div>
 			<ul class="nav nav-pills pill-height">
@@ -329,5 +333,17 @@
 			  	<li id = "settings_page"><a href="#3a" data-toggle="tab"><i class="material-icons">settings</i></a></li>
 			</ul>
   		</div>
+<script>
+  		$("#timee").click(function() {
+  			php_time = getPhpTime();
+  			javascript_time = Date.now()/1000;
+  			difference = php_time - javascript_time;
+  			alert("PHP: " + php_time + " - JavaScript: " + javascript_time + " = " + difference);
+  		});
+
+  		function getPhpTime() {
+  			return <?php echo time(); ?>;
+  		}
+  		</script>
 </body>
 </html>

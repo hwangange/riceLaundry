@@ -19,7 +19,7 @@
     $machine = $_POST['machine'];
     $timer = intval($_POST['timer']);
 
-    $time = intval(time()) + ($timer/60); //time since 1970 in seconds
+    $time = intval(time()) + ($timer*60); //time since 1970 in seconds
 
     $sql = "UPDATE machines SET timer = '$time' WHERE type = '$machine'";
     $result = $conn->query($sql);
