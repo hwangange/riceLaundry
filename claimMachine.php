@@ -1,7 +1,7 @@
 <?php
 	session_start();
-  if(isset($_SESSION['user'])) {
-    echo "Logged in: " . $_SESSION['user'];
+  if(!isset($_SESSION['user'])) {
+    header('Location: login.php');
   }
 
 	$db_host = "localhost";
@@ -15,31 +15,35 @@
     } 
         
 
-	  $user = $_SESSION['user'];
+	$user = $_SESSION['user'];
     $machine = $_POST['machine'];
-    $timer = strval($_POST['timer']);
+    $timer = intval($_POST['timer']);
 
-    $sql = "UPDATE machines SET timer = '$timer', status = 'red' WHERE type = '$machine'";
+    $time = intval(time()) + ($timer/60); //time since 1970 in seconds
+
+    $sql = "UPDATE machines SET timer = '$time' WHERE type = '$machine'";
     $result = $conn->query($sql);
 
-    echo strval($result);
+   // echo strval($result);
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+      //  echo "Record updated successfully";
+        $sql = "UPDATE users SET machine = '$machine' WHERE username = '$user'";
+        $result = $conn->query($sql);
+
+        if ($conn->query($sql) === TRUE) {
+          //  echo "Record updated successfully";
+            header('Location: index.php');
+        } else {
+            echo "Error updating record: " . $conn->error;
+        }
+
+        
     } else {
         echo "Error updating record: " . $conn->error;
     }
 
-    $sql = "UPDATE users SET machine = '$machine' WHERE username = '$user'";
-    $result = $conn->query($sql);
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
-    } else {
-        echo "Error updating record: " . $conn->error;
-    }
-
-    header('Location: index.php');
+   
 
 ?>
 
