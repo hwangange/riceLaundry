@@ -215,32 +215,32 @@
 				
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<button type="button" class="washerbutton" name = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
-						<button type="button" class="washerbutton" name = "washer2" data-toggle="modal" data-target="#myModal">Washer 2</button>
-						<button type="button" class="washerbutton" name = "washer3" data-toggle="modal" data-target="#myModal">Washer 3</button>
-						<button type="button" class="washerbutton" name = "washer4" data-toggle="modal" data-target="#myModal">Washer 4</button>
-						<button type="button" class="washerbutton" name = "washer5" data-toggle="modal" data-target="#myModal">Washer 5</button>
-						<button type="button" class="washerbutton" name = "washer6" data-toggle="modal" data-target="#myModal">Washer 6</button>
-						<button type="button" class="washerbutton" name = "washer7" data-toggle="modal" data-target="#myModal">Washer 7</button>
-						<button type="button" class="washerbutton" name = "washer8" data-toggle="modal" data-target="#myModal">Washer 8</button>
+						<button type="button" class="washerbutton" name = "washer1" id = "washer1" data-toggle="modal" data-target="#myModal">Washer 1</button>
+						<button type="button" class="washerbutton" name = "washer2" id = "washer2" data-toggle="modal" data-target="#myModal">Washer 2</button>
+						<button type="button" class="washerbutton" name = "washer3" id = "washer3" data-toggle="modal" data-target="#myModal">Washer 3</button>
+						<button type="button" class="washerbutton" name = "washer4" id = "washer4" data-toggle="modal" data-target="#myModal">Washer 4</button>
+						<button type="button" class="washerbutton" name = "washer5" id = "washer5" data-toggle="modal" data-target="#myModal">Washer 5</button>
+						<button type="button" class="washerbutton" name = "washer6" id = "washer6" data-toggle="modal" data-target="#myModal">Washer 6</button>
+						<button type="button" class="washerbutton" name = "washer7" id = "washer7" data-toggle="modal" data-target="#myModal">Washer 7</button>
+						<button type="button" class="washerbutton" name = "washer8" id = "washer8" data-toggle="modal" data-target="#myModal">Washer 8</button>
 					</div>
 
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-						<button type="button" class="washerbutton" name = "dryer1" data-toggle="modal" data-target="#myModal">Dryer 1</button>
-						<button type="button" class="washerbutton" name = "dryer2" data-toggle="modal" data-target="#myModal">Dryer 2</button>
-						<button type="button" class="washerbutton" name = "dryer3" data-toggle="modal" data-target="#myModal">Dryer 3</button>
-						<button type="button" class="washerbutton" name = "dryer4" data-toggle="modal" data-target="#myModal">Dryer 4</button>
-						<button type="button" class="washerbutton" name = "dryer5" data-toggle="modal" data-target="#myModal">Dryer 5</button>
-						<button type="button" class="washerbutton" name = "dryer6" data-toggle="modal" data-target="#myModal">Dryer 6</button>
+						<button type="button" class="washerbutton" name = "dryer1" id = "dryer1" data-toggle="modal" data-target="#myModal">Dryer 1</button>
+						<button type="button" class="washerbutton" name = "dryer2" id = "dryer2" data-toggle="modal" data-target="#myModal">Dryer 2</button>
+						<button type="button" class="washerbutton" name = "dryer3" id = "dryer3" data-toggle="modal" data-target="#myModal">Dryer 3</button>
+						<button type="button" class="washerbutton" name = "dryer4" id = "dryer4" data-toggle="modal" data-target="#myModal">Dryer 4</button>
+						<button type="button" class="washerbutton" name = "dryer5" id = "dryer5" data-toggle="modal" data-target="#myModal">Dryer 5</button>
+						<button type="button" class="washerbutton" name = "dryer6" id = "dryer6" data-toggle="modal" data-target="#myModal">Dryer 6</button>
 					</div>
 
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-						<button type="button" class="washerbutton" name = "dryer7" data-toggle="modal" data-target="#myModal">Dryer 7</button>
-						<button type="button" class="washerbutton" name = "dryer8" data-toggle="modal" data-target="#myModal">Dryer 8</button>
-						<button type="button" class="washerbutton" name = "dryer9" data-toggle="modal" data-target="#myModal">Dryer 9</button>
-						<button type="button" class="washerbutton" name = "dryer10"  data-toggle="modal" data-target="#myModal">Dryer 10</button>
-						<button type="button" class="washerbutton" name = "dryer11"  data-toggle="modal" data-target="#myModal">Dryer 11</button>
-						<button type="button" class="washerbutton" name = "dryer12" data-toggle="modal" data-target="#myModal">Dryer 12</button>
+						<button type="button" class="washerbutton" name = "dryer7" id = "dryer7" data-toggle="modal" data-target="#myModal">Dryer 7</button>
+						<button type="button" class="washerbutton" name = "dryer8" id = "dryer8" data-toggle="modal" data-target="#myModal">Dryer 8</button>
+						<button type="button" class="washerbutton" name = "dryer9" id = "dryer9" data-toggle="modal" data-target="#myModal">Dryer 9</button>
+						<button type="button" class="washerbutton" name = "dryer10" id = "dryer10" data-toggle="modal" data-target="#myModal">Dryer 10</button>
+						<button type="button" class="washerbutton" name = "dryer11" id = "dryer11" data-toggle="modal" data-target="#myModal">Dryer 11</button>
+						<button type="button" class="washerbutton" name = "dryer12" id = "dryer12" data-toggle="modal" data-target="#myModal">Dryer 12</button>
 					</div>
 				</div>
 			</div>
