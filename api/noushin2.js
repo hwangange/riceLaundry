@@ -14,6 +14,7 @@ function init_machines(curr_time){
 function update_ui(element){
 	var id=element.type;
 	var machine = document.getElementById(id);
+	var class_list = machine.className;
 	var curr_time = Date.now()/1000;
 	var time_stamp = element.timer;
 	var diff = curr_time-time_stamp;
@@ -25,11 +26,16 @@ function update_ui(element){
 		if(minutes<10)minutes="0"+minutes;
 		if(seconds<10)seconds="0"+seconds;
 		machine.innerHTML=minutes+":"+seconds;
-		
+		if (class_list.contains("available")) {
+			class_list.remove("available").add("in-use");
+		}
 	}
 	else{
 
 		machine.innerHTML=id;
+		if (class_list.contains("in-use")) {
+			class_list.remove("in-use").add("available");
+		}
 
 	}
 	if(id==selected){
