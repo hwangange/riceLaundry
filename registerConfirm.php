@@ -14,7 +14,7 @@
     $password = $_POST["password"];
     $college = $_POST["college"];
 
-    $sql = "INSERT INTO users (name, username, password, college, settings, machine) VALUES ('name', '$username', '$password', 'college', '30', 'none')";
+    $sql = "INSERT INTO users (username, password, college, machine) VALUES ('$username', '$password', '$college', 'none')";
 
     if ($conn->query($sql) === TRUE) {
       header('Location: login.php');

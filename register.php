@@ -84,9 +84,8 @@
 				<div class="clearfix">
 					<button type="submit">CREATE ACCOUNT</button>
 				</div>
-			<a href="login.php"><p>
-				have an account? sign in</p></a>
 	</form>
+	<a href="login.php"><p>have an account? sign in</p></a>
 </main>
 </div>
 </body>
